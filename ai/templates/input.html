@@ -1,0 +1,10 @@
+<!-- templates/input.html -->
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="input_data" placeholder="Enter data" />
+    <button type="submit">Predict</button>
+</form>
+
+<!-- templates/result.html -->
+<h1>Prediction Result</h1>
+<p>{{ result }}</p>
