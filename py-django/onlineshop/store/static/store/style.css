@@ -1,0 +1,100 @@
+/* Main body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container for the product list */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Main heading styling */
+h1 {
+    text-align: center;
+    color: #4a5568;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Individual product card styling */
+.product {
+    background: white;
+    border: none;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect for product cards */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Product name styling */
+.product-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Product price styling */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #38a169;
+    background: linear-gradient(90deg, #38a169, #48bb78);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* No products message styling */
+.no-products {
+    text-align: center;
+    color: #718096;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border: 2px dashed #cbd5e0;
+}
+
+/* Add a subtle animation */
+.product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.product:hover::before {
+    left: 100%;
+}
